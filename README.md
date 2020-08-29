@@ -18,19 +18,19 @@ ______________
        
        + Apache Phoenix ```http://phoenix.apache.org/``` 
        
-       + Apache Hive can create an 'external table' using HiveQL
-       
+       + Apache Hive can create an 'external table' using HiveQl
            ```
-               CREATE EXTERNAL TABLE tablename (
+           CREATE EXTERNAL TABLE tablename (
                 id int,
                 name String
             )
             ROW FORMAT DELIMITED
-            COLLECTION ITEMS TERMINATED BY '#'
+            COLLECTION ITEMS TERMINATED BY "#"
             STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
             WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,cf:name")
             TBLPROPERTIES ("hbase.table.name" = "tablename");
-       ```
+           ```
+               
     * Integrate HBase with a Programming Language Java, Python, Go, etc...
     
 
